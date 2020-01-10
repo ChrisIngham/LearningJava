@@ -3,11 +3,14 @@ public class OOPIntro{
     public static void main(String[] args){
         User user = new User();
 
-        user.firstName = "David";
-        user.lastName = "Jones";
+        user.setFirstName("David");
+        user.setLastName("Jones");
     
-        String message = user.output();
+        // Making full name
+        String fullName = (user.getFirstName() + " " + user.getLastName());
 
-        System.out.println(message);
+        System.out.println(fullName);
+
+        
     }
 }
