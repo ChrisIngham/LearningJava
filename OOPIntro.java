@@ -1,16 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class OOPIntro{
     public static void main(String[] args){
-        User user = new User();
-
-        user.setFirstName("David");
-        user.setLastName("Jones");
+        User you = new User();
+        you.setFirstName("David");
+        you.setLastName("Jones");
     
-        // Making full name
-        String fullName = (user.getFirstName() + " " + user.getLastName());
+        User me = new User();
+        me.setFirstName("Jack");
+        me.setLastName("Sparrow");
 
-        System.out.println(fullName);
 
-        
+        List<User> users = new ArrayList<User>();
+        users.add(you);
+        users.add(me);
+    
+        System.out.println(users.get(1).getFullName());
     }
 }

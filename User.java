@@ -1,10 +1,9 @@
 
 public class User{
     private String firstName; 
-    public String lastName;
+    private String lastName;
 
     public String output(){
-       
         return "Hi, my name is " + firstName + " " + lastName + ".";
        
     }
@@ -13,18 +12,24 @@ public class User{
     public String getFirstName(){
         return firstName.toUpperCase();
     }
+    
     // Setting value from OOPINTRO for First Name
-
     public void setFirstName(String fn){
-        firstName = fn;
+        firstName = fn.strip();
     }
+    
     // Getting value from OOPINTRO for Last Name
-
     public String getLastName(){
         return lastName.toUpperCase();
     }
+   
     // Setting value from OOPINTRO for Last Name
     public void setLastName(String ln){
-        lastName = ln;
+        lastName = ln.strip();
+    }
+   
+    // returns fullname
+    public String getFullName(){
+        return getFirstName() + " " + getLastName();
     }
 }
