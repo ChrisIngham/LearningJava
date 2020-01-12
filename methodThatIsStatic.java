@@ -4,11 +4,19 @@ import java.util.List;
 public class methodThatIsStatic {
     public static void main (String [] args){
 
-        User u = new User();
-        u.setFirstName("David");
-        u.setLastName("Jones");
+        User me = new User();
+        me.setFirstName("David");
+        me.setLastName("Jones");
 
-        User.printUser(u);
+        User you = new User();
+        you.setFirstName("James");
+        you.setLastName("Dean");
+        
+        List<User> users = new ArrayList<User>();
+        users.add(me);
+        users.add(you);
+        
+        User.printUsers(users);
     }
    
 }

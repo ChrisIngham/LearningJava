@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class User{
     private String firstName; 
@@ -31,5 +32,12 @@ public class User{
     // returns fullname
     public String getFullName(){
         return getFirstName() + " " + getLastName();
+    }
+   
+    // Prints full user
+    public static void printUsers(List<User> users){
+        for (User u : users){
+            System.out.println(u.getFullName());
+        }
     }
 }
