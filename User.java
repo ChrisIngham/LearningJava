@@ -5,13 +5,19 @@ public class User{
     private String lastName;
 
     public String output(){
-        return "Hi, my name is " + firstName + " " + lastName + ".";
+        return "Hi, my name is " + getFirstName() + " " + getLastName() + ".";
        
     }
 
+    public String output(boolean nice){
+        if (nice){
+            return "You are nice";
+        }
+        return "you are a freak. - " + getFullName() + ".";
+    }
     // Getting value from OOPINTRO for First Name
     public String getFirstName(){
-        return firstName.toUpperCase();
+        return firstName;
     }
     
     // Setting value from OOPINTRO for First Name
@@ -21,7 +27,7 @@ public class User{
     
     // Getting value from OOPINTRO for Last Name
     public String getLastName(){
-        return lastName.toUpperCase();
+        return lastName;
     }
    
     // Setting value from OOPINTRO for Last Name
@@ -39,5 +45,17 @@ public class User{
         for (User u : users){
             System.out.println(u.getFullName());
         }
+    }
+
+    public static int searchList (List<User> users, String fn, String ln){
+        return searchList(users, fn + " " + ln);
+    }
+    public static int searchList (List<User> users, String fullName){
+        for (int i = 0; i < users.size(); i++){
+            if (users.get(i).getFullName().equals(fullName) ){
+                return i; 
+            }
+        }
+        return -1;
     }
 }
