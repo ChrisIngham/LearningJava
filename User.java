@@ -34,17 +34,30 @@ public class User{
     public void setLastName(String ln){
         lastName = ln.strip();
     }
-   
     // returns fullname
     public String getFullName(){
         return getFirstName() + " " + getLastName();
     }
+   
+   
+   
    
     // Prints full user
     public static void printUsers(List<User> users){
         for (User u : users){
             System.out.println(u.getFullName());
         }
+    }
+    public static User findUser(List<User> users, User u){
+        for (User user : users){
+            if (user.equals(u)){
+                return user;
+            }
+        }
+        return null;
+    }
+    public static int searchList(List<User> users, User u){
+        return searchList(users, u.getFullName());    
     }
 
     public static int searchList (List<User> users, String fn, String ln){
@@ -57,5 +70,9 @@ public class User{
             }
         }
         return -1;
+    }
+    @Override 
+    public String toString(){
+        return "User: " + getFullName() ;
     }
 }

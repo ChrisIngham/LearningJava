@@ -16,8 +16,9 @@ public class searchingArrayMethod {
         users.add(me);
         users.add(you);
         
-       
-    
+        //Shows the index of where the array is in the list
+        System.out.println(User.findUser(users, you));
+        //Searching for the values of james and Dean then making them a string as fullname
         System.out.println(User.searchList(users, "James", "Dean"));
     }
    
