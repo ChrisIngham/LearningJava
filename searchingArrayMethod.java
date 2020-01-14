@@ -20,6 +20,10 @@ public class searchingArrayMethod {
         System.out.println(User.findUser(users, you));
         //Searching for the values of james and Dean then making them a string as fullname
         System.out.println(User.searchList(users, "James", "Dean"));
+   
+        // Changes value of you to changed as the first name
+        User.changeCrap(you);
+        System.out.println(you);
     }
    
 }
