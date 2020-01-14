@@ -38,8 +38,10 @@ public class User{
     public String getFullName(){
         return getFirstName() + " " + getLastName();
     }
-   
-   
+    //Changes first name of the user that is called in the other program
+    public static void changeCrap (User x){
+        x.setFirstName("Changed");
+    }
    
    
     // Prints full user
@@ -55,6 +57,7 @@ public class User{
             }
         }
         return null;
+        
     }
     public static int searchList(List<User> users, User u){
         return searchList(users, u.getFullName());    
